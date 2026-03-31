@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aryan Vishwakarma — Full-Stack Developer</title>
+  <meta name="description" content="Full-Stack Developer specializing in scalable web applications, AI-powered tools, and pixel-perfect interfaces." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="mainNav" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo" aria-label="Aryan Vishwakarma">AV</a>
+        <ul class="nav-links" role="list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Start a Project</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog">
+    <a href="#work" class="mobile-link">Work</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#process" class="mobile-link">Process</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#contact" class="nav-cta" style="margin-top:1rem;">Start a Project</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow" aria-hidden="true">
+          <div class="hero-eyebrow-line"></div>
+          <span>Full-Stack Developer — Available for Projects</span>
+        </div>
+        <h1 class="hero-headline">
+          I Build Digital<br />Products That <em>Perform.</em>
+        </h1>
+        <p class="hero-subheadline">
+          Specializing in scalable web applications, AI-powered tools, and pixel-perfect interfaces — for clients who take their product seriously.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn-primary">
+            View My Work
+            <i data-lucide="arrow-down" style="width:16px;height:16px;"></i>
+          </a>
+          <a href="#contact" class="btn-ghost">
+            Let's Talk
+            <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+          </a>
+        </div>
+        <div class="hero-tech-bar">
+          <p class="hero-tech-label">Core Technologies</p>
+          <div class="tech-pills">
+            <span class="tech-pill">React 18</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">MongoDB</span>
+            <span class="tech-pill">OpenAI API</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">Redis</span>
+            <span class="tech-pill">REST APIs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CREDIBILITY BAR ===== -->
+  <div id="credibility" aria-label="Key statistics">
+    <div class="container">
+      <div class="cred-grid">
+        <div class="cred-item reveal">
+          <span class="cred-value">3+</span>
+          <span class="cred-label">Years Building</span>
+        </div>
+        <div class="cred-item reveal reveal-delay-1">
+          <span class="cred-value">10+</span>
+          <span class="cred-label">Projects Delivered</span>
+        </div>
+        <div class="cred-item reveal reveal-delay-2">
+          <span class="cred-value">Full-Stack</span>
+          <span class="cred-label">Frontend to Backend</span>
+        </div>
+        <div class="cred-item reveal reveal-delay-3">
+          <span class="cred-value">AI-Ready</span>
+          <span class="cred-label">LLM & OpenAI Integration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WORK ===== -->
+  <section id="work" aria-labelledby="work-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow" aria-hidden="true">
+          <div class="section-eyebrow-line"></div>
+          <span>Selected Work</span>
+        </div>
+        <h2 class="section-heading" id="work-heading">Built with Purpose,<br />Delivered with Precision.</h2>
+        <p class="section-subheading">A curated set of projects — each solving a real problem at production scale.</p>
+      </div>
+
+      <!-- Featured Project -->
+      <div class="featured-project">
+        <div class="project-mockup reveal reveal-delay-1" aria-label="AI Interview Assistant mockup">
+          <div class="mockup-inner">
+            <div class="mockup-bar">
+              <div class="mockup-dot"></div>
+              <div class="mockup-dot"></div>
+              <div class="mockup-dot"></div>
+            </div>
+            <div class="mockup-content">
+              <div class="mockup-accent-line"></div>
+              <h3 class="mockup-title">AI Interview Assistant</h3>
+              <div class="mockup-tag-row">
+                <span class="mockup-tag">React 18</span>
+                <span class="mockup-tag">Node.js</span>
+                <span class="mockup-tag">OpenAI</span>
+                <span class="mockup-tag">MongoDB</span>
+                <span class="mockup-tag">Docker</span>
+              </div>
+              <div class="mockup-accent-line"></div>
+            </div>
+          </div>
+          <div class="mockup-grid-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="project-info reveal reveal-delay-2">
+          <span class="project-category">Featured Project · Full-Stack Web Application</span>
+          <h3 class="project-title">AI Interview Assistant</h3>
+          <p class="project-description">
+            An end-to-end AI-powered platform that autonomously conducts, evaluates, and scores candidate interviews. Built with React 18, Node.js/Express, MongoDB, Redis, and the OpenAI API. Features JWT auth with refresh tokens, webcam integration, speech recognition, CI/CD via GitHub Actions, and Docker deployment.
+          </p>
+          <div class="project-highlight">
+            From auth to AI scoring — a production-grade system, designed and built solo.
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">React 18</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">OpenAI API</span>
+            <span class="project-tag">MongoDB</span>
+            <span class="project-tag">Redis</span>
+            <span class="project-tag">Docker</span>
+            <span class="project-tag">JWT Auth</span>
+            <span class="project-tag">Framer Motion</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link primary">
+              <i data-lucide="external-link" style="width:14px;height:14px;"></i>
+              Live Demo
+            </a>
+            <a href="#" class="project-link">
+              <i data-lucide="github" style="width:14px;height:14px;"></i>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Grid -->
+      <div class="project-grid">
+        <!-- Card 1 -->
+        <div class="project-card reveal">
+          <span class="card-category">Frontend Development</span>
+          <h3 class="card-title">Client Project — Placeholder</h3>
+          <p class="card-description">
+            Replace this with a real freelance project. Describe the problem, your solution, and the result — keep it outcome-focused.
+          </p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">React</span>
+              <span class="card-tag">Tailwind</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="card-arrow" style="width:18px;height:18px;"></i>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="project-card reveal reveal-delay-1">
+          <span class="card-category">Full-Stack Application</span>
+          <h3 class="card-title">Client Project — Placeholder</h3>
+          <p class="card-description">
+            Replace this with a real project. Focus on scale, tech decisions, and measurable outcomes like performance improvements or revenue impact.
+          </p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">Node.js</span>
+              <span class="card-tag">MongoDB</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="card-arrow" style="width:18px;height:18px;"></i>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="project-card reveal reveal-delay-2">
+          <span class="card-category">API / Integration</span>
+          <h3 class="card-title">Client Project — Placeholder</h3>
+          <p class="card-description">
+            Replace this with a real project. API integrations, third-party services, or backend-heavy work are strong signals for high-value clients.
+          </p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">REST API</span>
+              <span class="card-tag">Docker</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="card-arrow" style="width:18px;height:18px;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <div class="section-header reveal" style="margin-bottom:2rem;">
+            <div class="section-eyebrow" aria-hidden="true">
+              <div class="section-eyebrow-line"></div>
+              <span>About</span>
+            </div>
+            <h2 class="section-heading" id="about-heading">The Developer<br />Behind the Work.</h2>
+          </div>
+          <div class="about-body reveal reveal-delay-1">
+            <p>I'm <strong>Aryan Vishwakarma</strong>, a Full-Stack Developer based in India. I specialize in building fast, scalable, and intelligent web applications — from clean frontends to robust backends and AI integrations.</p>
+            <p>I work with clients who want their product built <strong>right</strong>, not just built fast. That means clean architecture, thoughtful API design, and code that the next developer won't curse when they open it.</p>
+            <p>My current focus is on <strong>AI-powered products</strong> — combining modern frontend craft with OpenAI integrations to build tools that genuinely change how people work.</p>
+          </div>
+          <a href="#" class="resume-link reveal reveal-delay-2" aria-label="Download resume">
+            Download Resume
+            <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+          </a>
+        </div>
+
+        <div class="skills-panel reveal reveal-delay-1">
+          <div>
+            <p class="skill-group-label">Frontend</p>
+            <div class="skill-tags">
+              <span class="skill-tag">React 18</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Vite</span>
+              <span class="skill-tag">Ant Design</span>
+              <span class="skill-tag">Framer Motion</span>
+              <span class="skill-tag">CSS / SCSS</span>
+            </div>
+          </div>
+          <div>
+            <p class="skill-group-label">Backend</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">JWT Auth</span>
+              <span class="skill-tag">WebSockets</span>
+            </div>
+          </div>
+          <div>
+            <p class="skill-group-label">Data & Infrastructure</p>
+            <div class="skill-tags">
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Redis</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">GitHub Actions</span>
+              <span class="skill-tag">Vercel</span>
+            </div>
+          </div>
+          <div>
+            <p class="skill-group-label">AI & Integrations</p>
+            <div class="skill-tags">
+              <span class="skill-tag">OpenAI API</span>
+              <span class="skill-tag">LLM Integration</span>
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">Webhook APIs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center;margin-bottom:5rem;">
+        <div class="section-eyebrow" style="justify-content:center;" aria-hidden="true">
+          <div class="section-eyebrow-line"></div>
+          <span>How I Work</span>
+          <div class="section-eyebrow-line"></div>
+        </div>
+        <h2 class="section-heading" id="process-heading">No Surprises.<br />No Scope Creep. Just Results.</h2>
+        <p class="section-subheading" style="margin:0.75rem auto 0;text-align:center;">A structured process that protects your budget and gets your product shipped.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step reveal">
+          <div class="step-number" aria-hidden="true">01</div>
+          <div class="step-content">
+            <h3 class="step-title">Discovery</h3>
+            <p class="step-desc">We align on your goals, timeline, and technical requirements before a single line of code is written. I ask the right questions so nothing critical is discovered mid-build.</p>
+          </div>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+          <div class="step-number" aria-hidden="true">02</div>
+          <div class="step-content">
+            <h3 class="step-title">Architecture & Planning</h3>
+            <p class="step-desc">I map out the full system — data models, API contracts, component structure, third-party integrations — so there are no costly surprises mid-project.</p>
+          </div>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="step-number" aria-hidden="true">03</div>
+          <div class="step-content">
+            <h3 class="step-title">Build & Iterate</h3>
+            <p class="step-desc">Regular updates, clean commits, and working demos. You always know where the project stands. Feedback loops are tight — not monthly check-ins.</p>
+          </div>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="step-number" aria-hidden="true">04</div>
+          <div class="step-content">
+            <h3 class="step-title">Delivery & Handoff</h3>
+            <p class="step-desc">Production-ready code, deployment, documentation, and a smooth handoff — or ongoing support if your product needs it. You own everything.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow" aria-hidden="true">
+          <div class="section-eyebrow-line"></div>
+          <span>Testimonials</span>
+        </div>
+        <h2 class="section-heading" id="testimonials-heading">What Clients Say.</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 — Replace with real testimonial -->
+        <div class="testimonial-card reveal">
+          <span class="quote-mark" aria-hidden="true">"</span>
+          <p class="testimonial-text">
+            "Replace this with a real client testimonial. Ask your best client for a quote after delivery — even one sentence about what they valued most is enough."
+          </p>
+          <div class="testimonial-author">
+            <span class="author-name">Client Name</span>
+            <span class="author-role">Role · Company Name</span>
+            <!-- Replace with real testimonial -->
+            <span class="placeholder-note">// Replace with real testimonial</span>
+          </div>
+        </div>
+        <!-- Testimonial 2 — Replace with real testimonial -->
+        <div class="testimonial-card reveal reveal-delay-1">
+          <span class="quote-mark" aria-hidden="true">"</span>
+          <p class="testimonial-text">
+            "A second testimonial here. Focus on outcomes — 'shipped on time', 'exactly what we asked for', 'proactive communication' — these are what high-value clients look for in a developer."
+          </p>
+          <div class="testimonial-author">
+            <span class="author-name">Client Name</span>
+            <span class="author-role">Role · Company Name</span>
+            <!-- Replace with real testimonial -->
+            <span class="placeholder-note">// Replace with real testimonial</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <div class="availability-badge" aria-live="polite">
+            <div class="avail-dot" aria-hidden="true"></div>
+            Available for New Projects
+          </div>
+          <div class="section-eyebrow reveal" aria-hidden="true">
+            <div class="section-eyebrow-line"></div>
+            <span>Contact</span>
+          </div>
+          <h2 class="section-heading reveal reveal-delay-1" id="contact-heading" style="margin-top:1rem;">
+            Let's Build<br />Something Serious.
+          </h2>
+          <p class="contact-intro reveal reveal-delay-2">
+            Have a project in mind? Let's talk scope, timeline, and budget — no commitment required. I respond within 24 hours.
+          </p>
+          <div class="contact-direct reveal reveal-delay-3">
+            <span class="contact-direct-label">Or email directly</span>
+            <a href="mailto:your@email.com">your@email.com</a>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="name">Your Name</label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="budget">Project Budget</label>
+              <select class="form-select" id="budget" name="budget">
+                <option value="" disabled selected>Select a range</option>
+                <option value="500-1000">$500 – $1,000</option>
+                <option value="1000-5000">$1,000 – $5,000</option>
+                <option value="5000-15000">$5,000 – $15,000</option>
+                <option value="15000+">$15,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Tell Me About Your Project</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="What are you building? What's the timeline? Any technical details?" required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Send Message
+              <i data-lucide="send" style="width:15px;height:15px;"></i>
+            </button>
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+              ✓ Message sent — I'll be in touch within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-copy">© 2025 Aryan Vishwakarma. All rights reserved.</span>
+        <span class="footer-logo" aria-hidden="true">AV</span>
+        <div class="footer-links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+          <a href="https://fiverr.com" target="_blank" rel="noopener noreferrer" aria-label="Fiverr">Fiverr</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script src="script.js"></script>
+</body>
+</html>
