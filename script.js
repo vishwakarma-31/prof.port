@@ -82,36 +82,82 @@
     }, { passive: true });
 
     // ===== CONTACT FORM =====
-    const form = document.getElementById('contactForm');
-    const formSuccess = document.getElementById('formSuccess');
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = form.querySelector('#name').value.trim();
-      const email = form.querySelector('#email').value.trim();
-      const message = form.querySelector('#message').value.trim();
-
-      if (!name || !email || !message) {
-        // Shake invalid fields
-        [form.querySelector('#name'), form.querySelector('#email'), form.querySelector('#message')].forEach(field => {
-          if (!field.value.trim()) {
-            field.style.borderColor = '#ef4444';
-            setTimeout(() => field.style.borderColor = '', 2000);
-          }
-        });
-        return;
-      }
-
-      // Simulate form submission
-      const submitBtn = form.querySelector('.form-submit');
-      submitBtn.textContent = 'Sending...';
-      submitBtn.disabled = true;
-
-      setTimeout(() => {
-        form.style.display = 'none';
-        formSuccess.style.display = 'block';
-      }, 1200);
+   const FORMSPREE_ID = 'xqegbavr'; // <-- Replace this
+ 
+const form = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
+const formError = document.getElementById('formError');
+ 
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+ 
+  const name = form.querySelector('#name').value.trim();
+  const email = form.querySelector('#email').value.trim();
+  const message = form.querySelector('#message').value.trim();
+ 
+  // ── Validate required fields ──────────────────────────────────
+  let hasError = false;
+  [
+    { field: form.querySelector('#name'), value: name },
+    { field: form.querySelector('#email'), value: email },
+    { field: form.querySelector('#message'), value: message },
+  ].forEach(({ field, value }) => {
+    if (!value) {
+      field.style.borderColor = '#ef4444';
+      setTimeout(() => (field.style.borderColor = ''), 2500);
+      hasError = true;
+    }
+  });
+  if (hasError) return;
+ 
+  // ── Guard: remind if Form ID isn't set yet ────────────────────
+  if (FORMSPREE_ID === 'YOUR_FORM_ID') {
+    alert(
+      '⚠️ Contact form not configured.\n\n' +
+      'Replace YOUR_FORM_ID in contact-form.js with your Formspree Form ID.\n' +
+      'Get one free at https://formspree.io'
+    );
+    return;
+  }
+ 
+  // ── Submit ────────────────────────────────────────────────────
+  const submitBtn = form.querySelector('.form-submit');
+  const originalHTML = submitBtn.innerHTML;
+ 
+  submitBtn.innerHTML = 'Sending...';
+  submitBtn.disabled = true;
+  if (formError) formError.style.display = 'none';
+ 
+  try {
+    const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(form),
     });
+ 
+    if (response.ok) {
+      // ── Success ──────────────────────────────────────────────
+      form.style.display = 'none';
+      formSuccess.style.display = 'block';
+    } else {
+      // ── Formspree returned an error ──────────────────────────
+      const data = await response.json();
+      throw new Error(data?.errors?.[0]?.message || 'Submission failed.');
+    }
+  } catch (err) {
+    // ── Network / server error ───────────────────────────────────
+    submitBtn.innerHTML = originalHTML;
+    submitBtn.disabled = false;
+ 
+    if (formError) {
+      formError.textContent =
+        '✕ Something went wrong. Please try again or email me directly.';
+      formError.style.display = 'block';
+    }
+ 
+    console.error('Form submission error:', err);
+  }
+});
 
     // ===== ACTIVE NAV LINK ON SCROLL =====
     const sections = document.querySelectorAll('section[id], #credibility');
