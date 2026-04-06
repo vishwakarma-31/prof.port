@@ -1,0 +1,92 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Quote, Star } from "lucide-react";
+
+const testimonials = [
+  {
+    name: "Vikram Mehta",
+    role: "CEO, TechFlow Solutions",
+    content: "Aryan didn't just build a dashboard; he helped us rethink our entire data workflow. Our revenue tracking is now 100% accurate, and our team saves hours every day.",
+    image: "https://i.pravatar.cc/150?u=vikram",
+  },
+  {
+    name: "Sarah Jenkins",
+    role: "Founder, Nexus AI",
+    content: "The AI tool Aryan built for us was a game-changer. It's fast, scalable, and exactly what our clients needed. His focus on business results is rare in developers.",
+    image: "https://i.pravatar.cc/150?u=sarah",
+  },
+  {
+    name: "Arjun Rao",
+    role: "CTO, Solaris Health",
+    content: "We needed a complex custom CRM on a tight deadline. Aryan delivered ahead of schedule, and the code quality is exceptional. Highly recommended for any serious project.",
+    image: "https://i.pravatar.cc/150?u=arjun",
+  }
+];
+
+export const Trust = () => {
+  return (
+    <section className="py-24 bg-black">
+      <div className="container px-4 mx-auto">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Trusted by <br />
+            <span className="gradient-text">Forward-Thinking Leaders</span>
+          </h2>
+          <p className="text-zinc-400 text-lg">
+            I've helped founders and businesses scale their digital products 
+            and achieve measurable growth.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          {testimonials.map((t, index) => (
+            <motion.div
+              key={t.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="p-8 glass-card border-white/5"
+            >
+              <div className="flex gap-1 mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-blue-500 fill-blue-500" />
+                ))}
+              </div>
+              <Quote className="w-10 h-10 text-white/10 mb-6" />
+              <p className="text-zinc-300 text-lg italic mb-8 leading-relaxed">
+                "{t.content}"
+              </p>
+              <div className="flex items-center gap-4">
+                <img
+                  src={t.image}
+                  alt={t.name}
+                  className="w-12 h-12 rounded-full border border-white/10"
+                />
+                <div>
+                  <div className="font-bold text-white">{t.name}</div>
+                  <div className="text-xs text-zinc-500 font-bold uppercase tracking-widest">{t.role}</div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="p-8 glass-card border-white/5 text-center">
+          <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest mb-8">
+            Companies I've helped scale
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-30 grayscale">
+            {/* Placeholder Logos */}
+            <div className="text-2xl font-bold text-zinc-300">TECHFLOW</div>
+            <div className="text-2xl font-bold text-zinc-300">NEXUS AI</div>
+            <div className="text-2xl font-bold text-zinc-300">SOLARIS</div>
+            <div className="text-2xl font-bold text-zinc-300">VELOCITY</div>
+            <div className="text-2xl font-bold text-zinc-300">QUANTUM</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
