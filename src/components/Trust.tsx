@@ -26,14 +26,14 @@ const testimonials = [
 
 export const Trust = () => {
   return (
-    <section className="py-24 bg-black">
+    <section className="py-24 bg-background">
       <div className="container px-4 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-primary">
             Trusted by <br />
-            <span className="gradient-text">Forward-Thinking Leaders</span>
+            <span className="gradient-text text-transparent bg-clip-text">Forward-Thinking Leaders</span>
           </h2>
-          <p className="text-zinc-400 text-lg">
+          <p className="text-secondary/80 text-lg font-sans">
             I've helped founders and businesses scale their digital products 
             and achieve measurable growth.
           </p>
@@ -47,43 +47,43 @@ export const Trust = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="p-8 glass-card border-white/5"
+              className="p-8 glass-card border-black/5"
             >
               <div className="flex gap-1 mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-blue-500 fill-blue-500" />
+                  <Star key={i} className="w-4 h-4 text-cta fill-cta" />
                 ))}
               </div>
-              <Quote className="w-10 h-10 text-white/10 mb-6" />
-              <p className="text-zinc-300 text-lg italic mb-8 leading-relaxed">
+              <Quote className="w-10 h-10 text-black/5 mb-6" />
+              <p className="text-secondary/90 text-lg italic mb-8 leading-relaxed font-sans">
                 "{t.content}"
               </p>
               <div className="flex items-center gap-4">
                 <img
                   src={t.image}
                   alt={t.name}
-                  className="w-12 h-12 rounded-full border border-white/10"
+                  className="w-12 h-12 rounded-full border border-black/10"
                 />
                 <div>
-                  <div className="font-bold text-white">{t.name}</div>
-                  <div className="text-xs text-zinc-500 font-bold uppercase tracking-widest">{t.role}</div>
+                  <div className="font-bold text-primary">{t.name}</div>
+                  <div className="text-xs text-secondary/60 font-bold uppercase tracking-widest font-sans">{t.role}</div>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
 
-        <div className="p-8 glass-card border-white/5 text-center">
-          <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest mb-8">
+        <div className="p-8 glass-card border-black/5 text-center">
+          <p className="text-sm font-bold text-secondary uppercase tracking-widest mb-8 font-sans">
             Companies I've helped scale
           </p>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-30 grayscale">
             {/* Placeholder Logos */}
-            <div className="text-2xl font-bold text-zinc-300">TECHFLOW</div>
-            <div className="text-2xl font-bold text-zinc-300">NEXUS AI</div>
-            <div className="text-2xl font-bold text-zinc-300">SOLARIS</div>
-            <div className="text-2xl font-bold text-zinc-300">VELOCITY</div>
-            <div className="text-2xl font-bold text-zinc-300">QUANTUM</div>
+            <div className="text-2xl font-bold text-secondary/80 font-sans tracking-tight">TECHFLOW</div>
+            <div className="text-2xl font-bold text-secondary/80 font-sans tracking-tight">NEXUS AI</div>
+            <div className="text-2xl font-bold text-secondary/80 font-sans tracking-tight">SOLARIS</div>
+            <div className="text-2xl font-bold text-secondary/80 font-sans tracking-tight">VELOCITY</div>
+            <div className="text-2xl font-bold text-secondary/80 font-sans tracking-tight">QUANTUM</div>
           </div>
         </div>
       </div>
